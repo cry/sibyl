@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 # Sybil main
 
-sybil_home = '%s/.sybil' % os.path.expanduser("~")
+sybil_home = '%s/.sibyl' % os.path.expanduser("~")
 sybil_config = '%s/key' % sybil_home
 
 if not os.path.isfile(sybil_config):
