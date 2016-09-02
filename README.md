@@ -8,7 +8,7 @@ By using a global salt instead of UUIDs, only the salt needs to be stored to gen
 
     git clone https://github.com/cry/sibyl .
     chmod +x sibyl.py
-    ln -s sibyl /usr/local/bin/sibyl
+    ln -s sibyl.py /usr/local/bin/sibyl
 
 ## Usage
 
