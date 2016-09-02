@@ -16,12 +16,12 @@ parser.add_argument('question', metavar='question', type=str,
 
 args = parser.parse_args()
 
-# Sybil main
+# Sibyl main
 
-sybil_home = '%s/.sibyl' % os.path.expanduser("~")
-sybil_config = '%s/key' % sybil_home
+sibyl_home = '%s/.sibyl' % os.path.expanduser("~")
+sibyl_config = '%s/key' % sibyl_home
 
-if not os.path.isfile(sybil_config):
+if not os.path.isfile(sibyl_config):
     print('Sibyl keyfile not found, generating...')
 
     key = b64encode(os.urandom(512)).decode('utf-8')
@@ -30,10 +30,10 @@ if not os.path.isfile(sybil_config):
 
     print('Save your key to a safe place as a backup.')
 
-    os.makedirs(sybil_home)
-    open(sybil_config, 'w', encoding='utf-8').write(key)
+    os.makedirs(sibyl_home)
+    open(sibyl_config, 'w', encoding='utf-8').write(key)
 
 if 'key' not in globals():
-    key = open(sybil_config, 'r', encoding='utf-8').read()
+    key = open(sibyl_config, 'r', encoding='utf-8').read()
 
 print(hashlib.sha256(("%s%s" % (args.question, key)).encode('utf-8')).hexdigest())
