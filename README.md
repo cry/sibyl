@@ -6,7 +6,7 @@ By using a global salt instead of UUIDs, only the salt needs to be stored to gen
 
 ## Install
 
-    cd /opt
+    cd /directory/of/your/choice
     mkdir sibyl && cd sibyl
     git clone https://github.com/cry/sibyl .
     chmod +x sibyl.py
