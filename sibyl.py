@@ -9,7 +9,7 @@ from base64 import b64encode
 
 # Arguments
 
-parser = argparse.ArgumentParser(description='Generates unique answers to secret questions.')
+parser = argparse.ArgumentParser(description='Generates unique answers to secret questions using a global salt.')
 
 parser.add_argument('question', metavar='question', type=str,
                     help='Question to hash')
