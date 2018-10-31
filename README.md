@@ -1,5 +1,7 @@
 # Sibyl
 
+## This tool has been depreciated.
+
 Takes recovery questions. Generates salt and hashes with sha256 for a unique answer.
 
 By using a global salt instead of UUIDs, only the salt needs to be stored to generate answers for all sites, reducing the risk of lost answers and a simpler program.
